@@ -15,8 +15,8 @@ public class Persona{
 
 class Program
 {
-
     static void Main(string[] args){
+        //Invicaciones de las Firmas
         Saludar();
         MostrarNumero(10);
         int suma = Sumar(5,7);
@@ -67,7 +67,6 @@ class Program
         Console.WriteLine(promedio);
 
         RepetirMensaje("No sé que poner D:", 3);
-
     }
 
     //#1
@@ -192,6 +191,7 @@ class Program
     }
 
 }
+
 
 
 
