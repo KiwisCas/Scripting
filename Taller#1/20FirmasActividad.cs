@@ -38,6 +38,36 @@ class Program
         MostrarPersona(p);
 
         Console.WriteLine(MostrarRandom());
+
+        int resultadoCuadrado = Cuadrado(5);
+        Console.WriteLine(resultadoCuadrado);
+
+        float redondeado = RoundDown(4.7f);
+        Console.WriteLine(redondeado);
+
+        int[] numeros = { 1, 2, 3, 4, 5 };
+        PrintArray(numeros);
+
+        bool hermoso = IsBeautiful();
+        Console.WriteLine(hermoso);
+
+        string textoInvertido = Reverse("Hola");
+        Console.WriteLine(textoInvertido);
+
+        double valor = WasteSpace(10);
+        Console.WriteLine(valor);
+
+        int abs1 = Absolute(-8);
+        Console.WriteLine(abs1);
+
+        bool esDivisible = DivBy3(9);
+        Console.WriteLine(esDivisible);
+
+        double promedio = Promedio(8.5, 9.5);
+        Console.WriteLine(promedio);
+
+        RepetirMensaje("No sé que poner D:", 3);
+
     }
 
     //#1
@@ -94,8 +124,75 @@ class Program
         Random r = new Random();
         return r.Next(1,100);
     }
+    //#11
+    static int Cuadrado(int n)
+    {
+        n *= n;
+        return n;
+    }
+    //#12
+    static float RoundDown(float n)
+    {
+        //Creo que no hay que escribir las funciones so, dejemos así
+        return n
+    }
+    //#13
+    static void PrintArray(int[] arr)
+    {
+        for (int i=0; i<arr.Length; i++)
+        {
+            Console.WriteLine(arr[i])
+        }
+    }
+    //#14
+    static bool IsBeautiful()
+    {
+        return true;
+    }
+    //#15
+    static string Reverse(string str)
+    {
+        //Código!
+        return str;
+    }
+    //#16
+    static double WasteSpace(int n)
+    {
+        return double;
+    }
+    //#17
+    static int Absolute(int n)
+    {
+        if (n>0)
+        {
+            return n;
+        }
+        else
+        {
+            return -1*n;
+        }
+    }
+    //#18
+    static bool DivBy3 (int n)
+    {
+        return (n % 3 == 0);
+    }
+    //#19
+    static double Promedio(double a, double b)
+    {
+        return (a + b) / 2;
+    }
+    //#20
+    static void RepetirMensaje(string mensaje, int veces)
+    {
+        for (int i = 0; i < veces; i++)
+        {
+            Console.WriteLine(mensaje);
+        }
+    }
 
 }
+
 
 
 
