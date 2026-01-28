@@ -76,7 +76,7 @@ namespace EjerciciosScripting
             }
 
             return true;
-        }*/
+        }
 
         //Calcule el promedio de los números positivos de un array de números flotantes.
         static void Main()
@@ -100,6 +100,67 @@ namespace EjerciciosScripting
                 Console.Write(array[i] + " ");
             }
         }
+
+        // 7. Lea una cadena de números enteros positivos y luego cree un array con los números de la cadena.
+        //    Se debe validar que la cadena contenga números.
+
+        Console.WriteLine("Ingrese una sucesión de números enteros positivos, separados por \",\" (coma)");
+        string inp = Console.ReadLine();
+
+        string[] s_nums = inp.Split(',');
+        int[] nums = new int[s_nums.Length];
+        int i = 0;
+        bool printArray = true;
+
+        foreach (string s in s_nums)
+        {
+            bool isNum = int.TryParse(s, out int n);
+
+            if (isNum && n>0)
+            {
+                nums[i] = n;
+                i++;
+            }
+            else
+            {
+                Console.WriteLine("Uno de los valores ingresados no es un entero positivo, o se cometió un error en el ingreso de valores.");
+                i = 0;
+                printArray = false;
+                break;
+            }
+        }
+
+        if (printArray)
+        {
+            Console.WriteLine("Array final:");
+            foreach (int n in nums)
+            {
+                Console.WriteLine(n);
+            }
+        }
+
+        // 29. Usando un ciclo for, calcule el factorial de un número n, tenga en cuenta validar los casos especiales.
+
+        Console.WriteLine("Calcular el Factorial de n");
+        Console.Write("Valor de n = ");
+        string input = Console.ReadLine();
+
+        int n = Convert.ToInt32(input);
+
+        if (n < 0)
+        {
+            Console.WriteLine("Los números negativos no tienen factorial en la aritmética de números enteros.");
+        }
+        else
+        {
+            double result = 1;
+
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine(n + "! = " + result);
+        }*/
 
 
     }
